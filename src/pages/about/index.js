@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
@@ -11,6 +11,31 @@ import {
 } from "../../content_option";
 
 export const About = () => {
+  const [animationCycle, setAnimationCycle] = useState(0);
+  const skillsSectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = skillsSectionRef.current;
+    if (!section) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setAnimationCycle((prev) => prev + 1);
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -37,7 +62,7 @@ export const About = () => {
         </Row>
         <Row className=" sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Work Timline</h3>
+            <h3 className="color_sec py-4">Education & Achievements</h3>
           </Col>
           <Col lg="7">
             <table className="table caption-top">
@@ -59,10 +84,10 @@ export const About = () => {
           <Col lg="5">
             <h3 className="color_sec py-4">Skills</h3>
           </Col>
-          <Col lg="7">
+          <Col lg="7" ref={skillsSectionRef}>
             {skills.map((data, i) => {
               return (
-                <div key={i}>
+                <div key={`${data.name}-${animationCycle}`}>
                   <h3 className="progress-title">{data.name}</h3>
                   <div className="progress">
                     <div
@@ -80,8 +105,8 @@ export const About = () => {
           </Col>
         </Row>
         <Row className="sec_sp">
-          <Col lang="5">
-            <h3 className="color_sec py-4">services</h3>
+          <Col lg="5">
+            <h3 className="color_sec py-4">Interests & Activities</h3>
           </Col>
           <Col lg="7">
             {services.map((data, i) => {

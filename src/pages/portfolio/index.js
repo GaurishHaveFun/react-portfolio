@@ -19,18 +19,25 @@ export const Portfolio = () => {
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
-        <div className="mb-5 po_items_ho">
-          {dataportfolio.map((data, i) => {
-            return (
-              <div key={i} className="po_item">
-                <img src={data.img} alt="" />
-                <div className="content">
-                  <p>{data.description}</p>
-                  <a href={data.link}>view project</a>
-                </div>
+        <div className="portfolio-grid mb-5">
+          {dataportfolio.map((data, index) => (
+            <article key={index} className="portfolio-card">
+              <div className="card-media">
+                <img src={data.img} alt={data.description} loading="lazy" />
               </div>
-            );
-          })}
+              <div className="card-body">
+                <p className="card-description">{data.description}</p>
+                <a
+                  href={data.link || "#"}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="card-link"
+                >
+                  View Project
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
       </Container>
     </HelmetProvider>

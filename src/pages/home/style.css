@@ -61,6 +61,11 @@ section {
     margin: 0 auto;
 }
 
+.intro_sec .intro p {
+    word-break: normal;
+    hyphens: none;
+}
+
 @media (max-width:991.98px) {
     .intro_sec .intro {
         max-width: 700px;
@@ -96,6 +101,7 @@ section {
     background-position: center;
     min-height: 700px;
     position: relative;
+    overflow: hidden;
 }
 
 .ac_btn {
@@ -229,6 +235,4 @@ section {
     color: var(--text-color)
 }
 
-.intro_sec .h_bg-image {
-    filter: saturate(0.5);
-}
+/* 3D Canvas styling handled in component */
