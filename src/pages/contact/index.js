@@ -6,8 +6,7 @@ import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
 
-export const ContactUs = () => {
-  const [formData, setFormdata] = useState({
+const DEFAULT_FORM_STATE = {
     email: "",
     name: "",
     message: "",
@@ -15,11 +14,17 @@ export const ContactUs = () => {
     show: false,
     alertmessage: "",
     variant: "",
-  });
+};
+
+export const ContactUs = () => {
+  const [formData, setFormdata] = useState(DEFAULT_FORM_STATE);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormdata({ loading: true });
+    setFormdata((prev) => ({
+      ...prev,
+      loading: true,
+    }));
 
     const templateParams = {
       from_name: formData.email,
@@ -39,7 +44,7 @@ export const ContactUs = () => {
         (result) => {
           console.log(result.text);
           setFormdata({
-            loading: false,
+            ...DEFAULT_FORM_STATE,
             alertmessage: "SUCCESS! ,Thankyou for your messege",
             variant: "success",
             show: true,
@@ -47,11 +52,13 @@ export const ContactUs = () => {
         },
         (error) => {
           console.log(error.text);
-          setFormdata({
+          setFormdata((prev) => ({
+            ...prev,
+            loading: false,
             alertmessage: `Faild to send!,${error.text}`,
             variant: "danger",
             show: true,
-          });
+          }));
           document.getElementsByClassName("co_alert")[0].scrollIntoView();
         }
       );
@@ -145,7 +152,7 @@ export const ContactUs = () => {
                 name="message"
                 placeholder="Message"
                 rows="5"
-                value={formData.message}
+                value={formData.message || ""}
                 onChange={handleChange}
                 required
               ></textarea>

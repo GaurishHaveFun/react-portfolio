@@ -30,11 +30,7 @@ const worktimeline = [
         where: "University of Georgia",
         date: "Jan - May 2025",
     },
-    {
-        jobtitle: "Hackathon Developer — Financial Dashboard",
-        where: "UGA Hackathon",
-        date: "Jan 2025",
-    },
+
 ];
 
 const skills = [{
@@ -81,36 +77,33 @@ const services = [{
     },
 ];
 
-const dataportfolio = [{
-        img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-        description: "E-Commerce Web Application - A full-stack e-commerce platform with user authentication, payment integration, and admin dashboard.",
-        link: "#",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop",
-        description: "Task Management App - A collaborative task management application built with React and Node.js for team productivity.",
-        link: "#",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-        description: "Weather Dashboard - A responsive weather application that displays real-time weather data using API integration.",
-        link: "#",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop",
-        description: "Portfolio Website - A personal portfolio website showcasing projects and skills with modern design and animations.",
-        link: "#",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop",
-        description: "Social Media Dashboard - Analytics dashboard for social media metrics with data visualization and reporting features.",
-        link: "#",
-    },
-    {
-        img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop",
-        description: "Mobile Fitness App - A cross-platform mobile application for tracking workouts and fitness goals.",
-        link: "#",
-    },
+const dataportfolio = [
+  {
+    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Financial Dashboard – Built an interactive dashboard using React, Node.js, and D3.js, visualizing 50+ financial metrics with real-time, dynamic charts.",
+    link: "#",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1593280405106-e438ebe93f5b?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Parking Indicator – Developed a PyTorch-based CNN trained on 12,000+ parking images, achieving 75% accuracy in detecting car occupancy.",
+    link: "#",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1593023333594-487b2f7dd415?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Object Detection Research – Built a YOLO-based pipeline achieving 80% precision, curated a dataset of 5,000+ images using Roboflow and ImageJ.",
+    link: "#",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "S&P 500 Prediction Model – Built a RandomForestClassifier using Python, Pandas, and Scikit-Learn to predict market movement using price trends and rolling averages, achieving ~54% accuracy.",
+    link: "https://github.com/GaurishHaveFun/SP500Prediction",
+    newTab: true,
+  },
+  {
+    img: "https://images.unsplash.com/photo-1683029096295-7680306aa37d?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Discord Automation Bot – Python-based bot automating reminders and event management for 200+ CS club members.",
+    link: "#",
+  }
 ];
 
 const contactConfig = {
@@ -119,9 +112,9 @@ const contactConfig = {
     description: "I’m always open to new opportunities, collaborations, and conversations in tech. Feel free to reach out!",
     // Create an emailjs.com account 
     // Check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    YOUR_SERVICE_ID: "service_fftgd2q",
+    YOUR_TEMPLATE_ID: "template_jsy0x4j",
+    YOUR_USER_ID: "JFNVtEhf0ZUKEcEHK",
 };
 
 const socialprofils = {

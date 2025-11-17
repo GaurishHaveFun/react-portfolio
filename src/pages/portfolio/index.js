@@ -28,9 +28,9 @@ export const Portfolio = () => {
               <div className="card-body">
                 <p className="card-description">{data.description}</p>
                 <a
-                  href={data.link || "#"}
-                  target="_blank"
-                  rel="noreferrer"
+                  href={data.link || "/portfolio"}
+                  target={data.newTab ? "_blank" : undefined}
+                  rel={data.newTab ? "noopener noreferrer" : undefined}
                   className="card-link"
                 >
                   View Project
