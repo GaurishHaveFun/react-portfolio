@@ -2,7 +2,7 @@
 
 This is my personal portfolio website built using **React**, designed to showcase my projects, skills, and experience in software engineering. The site includes smooth animations, responsive design, and a contact form powered by **EmailJS**.
 
-🌐 **Live Site:** https://your-vercel-url-here  
+🌐 **Live Site:** https://gaurish-portfolio-website.vercel.app/
 📦 **Tech Stack:** React, JavaScript, HTML, CSS, EmailJS, Vercel
 
 
