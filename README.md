@@ -5,11 +5,6 @@ This is my personal portfolio website built using **React**, designed to showcas
 🌐 **Live Site:** https://your-vercel-url-here  
 📦 **Tech Stack:** React, JavaScript, HTML, CSS, EmailJS, Vercel
 
----
-
-## 📸 Preview
-
-![Portfolio Preview](https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop)
 
 ---
 
