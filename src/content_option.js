@@ -81,7 +81,7 @@ const dataportfolio = [
   {
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Financial Dashboard – Built an interactive dashboard using React, Node.js, and D3.js, visualizing 50+ financial metrics with real-time, dynamic charts.",
-    link: "#",
+    link: "https://github.com/GaurishHaveFun/Financial-Dashboard",
   },
   {
     img: "https://images.unsplash.com/photo-1593280405106-e438ebe93f5b?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
