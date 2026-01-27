@@ -26,7 +26,9 @@ export const Portfolio = () => {
                 <img src={data.img} alt={data.description} loading="lazy" />
               </div>
               <div className="card-body">
-                <p className="card-description">{data.description}</p>
+                <p className="card-description">
+                  <strong>{data.title}</strong> – {data.description}
+                </p>
                 <a
                   href={data.link || "/portfolio"}
                   target={data.newTab ? "_blank" : undefined}
