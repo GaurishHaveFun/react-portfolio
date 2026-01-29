@@ -100,10 +100,10 @@ const dataportfolio = [
     newTab: true,
   },
   {
-    img: "https://images.unsplash.com/photo-1593280405106-e438ebe93f5b?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Parking Indicator",
-    description: "Developed a PyTorch-based CNN trained on 12,000+ parking images, achieving 75% accuracy in detecting car occupancy.",
-    link: "#",
+    img: "https://images.unsplash.com/photo-1653038417332-6db0ff9d4bfb?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Internship Tracker",
+    description: "A full-stack job tracker for UGA students that uses AI to extract ATS keywords from resumes and find relevant opportunities via the JSearch API.",
+    link: "https://github.com/GaurishHaveFun/Internship-Tracker1/tree/main",
   },
   {
     img: "https://images.unsplash.com/photo-1593023333594-487b2f7dd415?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
