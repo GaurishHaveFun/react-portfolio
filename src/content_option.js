@@ -21,6 +21,11 @@ const dataabout = {
 };
 const worktimeline = [
     {
+        jobtitle: "Software Engineer Intern",
+        where: "FanDuel",
+        date: "June - August 2026",
+    },
+    {
         jobtitle: "IT Security & Enterprise Architecture Intern",
         where: "Mercedes-Benz USA",
         date: "June - August 2025",
@@ -31,6 +36,20 @@ const worktimeline = [
         date: "Jan - May 2025",
     },
 
+];
+
+const dataexperience = [
+    {
+        jobtitle: "Software Engineer Intern",
+        where: "FanDuel",
+        location: "Atlanta, GA",
+        date: "June - August 2026",
+        bullets: [
+            "Designed and provisioned a Terraform managed AWS stack (S3, CloudFront with Origin Access Control, Lambda@Edge, DynamoDB) to host and route a multi-tenant application deployment platform, validated with 30+ test users.",
+            "Architected a FastAPI/DynamoDB backend implementing a project scoped Users, Projects, and Deployments REST hierarchy, including GSIs for efficient cross queries that improved performance by 30%, and ownership enforced access.",
+            "Built the end to end upload to production pipeline, including presigned S3 uploads, CodeBuild triggers, and live site promotion, leveraging Claude Code and Cursor to accelerate development, enabling users to go from ZIP upload to a public URL.",
+        ],
+    },
 ];
 
 const skills = [{
@@ -139,6 +158,7 @@ export {
     dataabout,
     dataportfolio,
     worktimeline,
+    dataexperience,
     skills,
     services,
     introdata,
