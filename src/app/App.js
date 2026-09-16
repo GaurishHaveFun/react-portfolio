@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router,
@@ -13,7 +13,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 function _ScrollToTop(props) {
   const { pathname } = useLocation();
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return props.children;
