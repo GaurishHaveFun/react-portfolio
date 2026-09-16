@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { logotext ,socialprofils } from "../content_option";
 import Themetoggle from "../components/themetoggle";
 
@@ -16,18 +16,26 @@ const Headermain = () => {
   return (
     <>
       <header className="fixed-top site__header">
-        <div className="d-flex align-items-center justify-content-between">
-          <Link  className="navbar-brand nav_ac" to="/">
+        <nav className="glass-nav">
+          <Link className="navbar-brand glass-brand" to="/">
             {logotext}
           </Link>
-          <div className="d-flex align-items-center">
-          <Themetoggle />
-          <button className="menu__button  nav_ac" onClick={handleToggle}>
-            {!isActive ? <VscClose /> : <VscGrabber />}
-          </button>
-          
+
+          <div className="glass-links">
+            <NavLink to="/" end className={({ isActive }) => isActive ? "active" : undefined}>Home</NavLink>
+            <NavLink to="/portfolio" className={({ isActive }) => isActive ? "active" : undefined}>Portfolio</NavLink>
+            <NavLink to="/about" className={({ isActive }) => isActive ? "active" : undefined}>About Me</NavLink>
+            <NavLink to="/experience" className={({ isActive }) => isActive ? "active" : undefined}>Experience</NavLink>
           </div>
-        </div>
+
+          <div className="glass-right">
+            <Link to="/contact" className="glass-cta">Contact</Link>
+            <Themetoggle />
+            <button className="glass-hamburger" onClick={handleToggle} aria-label="Open menu">
+              {!isActive ? <VscClose /> : <VscGrabber />}
+            </button>
+          </div>
+        </nav>
 
         <div className={`site__navigation ${!isActive ? "menu__opend" : ""}`}>
           <div className="bg__menu h-100">
@@ -42,6 +50,9 @@ const Headermain = () => {
                   </li>
                   <li className="menu_item">
                   <Link onClick={handleToggle} to="/about" className="my-3">About Me</Link>
+                  </li>
+                  <li className="menu_item">
+                  <Link onClick={handleToggle} to="/experience" className="my-3">Experience</Link>
                   </li>
                   <li className="menu_item">
                   <Link onClick={handleToggle} to="/contact" className="my-3"> Contact</Link>
@@ -62,7 +73,7 @@ const Headermain = () => {
       <div className="br-bottom"></div>
       <div className="br-left"></div>
       <div className="br-right"></div>
-      
+
     </>
   );
 };

@@ -1,3 +1,7 @@
+import fanduelLogo from "./assets/images/logos/fanduel.jpg";
+import mercedesBenzLogo from "./assets/images/logos/mercedes-benz.png";
+import ugaLogo from "./assets/images/logos/uga.png";
+
 const logotext = "Gaurish Vasireddy";
 const meta = {
     title: "Gaurish Vasireddy - Student Portfolio",
@@ -17,37 +21,44 @@ const introdata = {
 
 const dataabout = {
     title: "A bit about myself",
-    aboutme: "I’m a Computer Science student focused on software engineering, AI/ML, and building systems that solve real problems. I enjoy taking on projects that challenge me and expand my skills. When I’m not coding, I’m exploring new tools, experimenting with technologies, and collaborating with others on meaningful work. I’m always looking for the next opportunity to learn and grow.",
+    aboutme: [
+        "I'm a Computer Science student at the University of Georgia, go Dawgs, studying with a Finance minor. I'm most interested in the overlap between software engineering and finance, and I enjoy building systems that actually work under real conditions. I interned in IT Security and Enterprise Architecture at Mercedes Benz USA, and I interned at FanDuel on their Tech Transformation team working on AI.",
+        "Outside of school I'm a big Atlanta Falcons and Atlanta Hawks fan, and I never miss a UGA football Saturday. I also spend a lot of my free time building trading tools and exploring quant strategies on my own, since I like understanding how markets actually work, not just how to code. I'm always looking for the next thing to build and learn from.",
+    ],
 };
-const worktimeline = [
-    {
-        jobtitle: "Software Engineer Intern",
-        where: "FanDuel",
-        date: "June - August 2026",
-    },
-    {
-        jobtitle: "IT Security & Enterprise Architecture Intern",
-        where: "Mercedes-Benz USA",
-        date: "June - August 2025",
-    },
-    {
-        jobtitle: "Undergraduate Researcher — Object Detection (YOLO)",
-        where: "University of Georgia",
-        date: "Jan - May 2025",
-    },
-
-];
-
 const dataexperience = [
     {
         jobtitle: "Software Engineer Intern",
         where: "FanDuel",
+        logo: fanduelLogo,
         location: "Atlanta, GA",
         date: "June - August 2026",
         bullets: [
             "Designed and provisioned a Terraform managed AWS stack (S3, CloudFront with Origin Access Control, Lambda@Edge, DynamoDB) to host and route a multi-tenant application deployment platform, validated with 30+ test users.",
             "Architected a FastAPI/DynamoDB backend implementing a project scoped Users, Projects, and Deployments REST hierarchy, including GSIs for efficient cross queries that improved performance by 30%, and ownership enforced access.",
             "Built the end to end upload to production pipeline, including presigned S3 uploads, CodeBuild triggers, and live site promotion, leveraging Claude Code and Cursor to accelerate development, enabling users to go from ZIP upload to a public URL.",
+        ],
+    },
+    {
+        jobtitle: "IT Security & Enterprise Architecture Intern",
+        where: "Mercedes-Benz USA",
+        logo: mercedesBenzLogo,
+        location: "Sandy Springs, GA",
+        date: "June - August 2025",
+        bullets: [
+            "Built Python automation tooling leveraging the Checkmarx REST API to integrate security scans into CI/CD pipelines across 3 engineering teams, reducing manual code review time by ~40% and enabling earlier vulnerability detection in the development lifecycle.",
+            "Audited and restructured IAM policies across AWS and Azure environments, applying least-privilege principles to eliminate 25% of excess permissions and strengthen compliance with enterprise security standards.",
+        ],
+    },
+    {
+        jobtitle: "Undergraduate Researcher — Object Detection (YOLO)",
+        where: "University of Georgia",
+        logo: ugaLogo,
+        location: "Athens, GA",
+        date: "Jan - May 2025",
+        bullets: [
+            "Developed an object detection pipeline using YOLO in Python, achieving 80% precision and 75% recall in detecting fly clusters on cattle images.",
+            "Applied data augmentation techniques including random flips, rotations, and scaling to address class imbalance, increasing training dataset diversity and improving model generalization.",
         ],
     },
 ];
@@ -157,7 +168,6 @@ export {
     meta,
     dataabout,
     dataportfolio,
-    worktimeline,
     dataexperience,
     skills,
     services,

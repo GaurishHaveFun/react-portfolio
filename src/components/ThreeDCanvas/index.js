@@ -156,6 +156,12 @@ const ThreeDCanvas = () => {
     canvas.addEventListener('mousemove', handleMouseMove);
     canvas.addEventListener('mouseleave', handleMouseLeave);
 
+    let resizeObserver;
+    if (typeof ResizeObserver !== 'undefined') {
+      resizeObserver = new ResizeObserver(() => resizeCanvas());
+      resizeObserver.observe(canvas);
+    }
+
     class Star {
       constructor() {
         this.variation = Math.random();
@@ -446,6 +452,7 @@ const ThreeDCanvas = () => {
       canvas.removeEventListener('mouseleave', handleMouseLeave);
       cancelAnimationFrame(animationFrameId);
       observer.disconnect();
+      if (resizeObserver) resizeObserver.disconnect();
     };
   }, []);
 

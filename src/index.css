@@ -6,6 +6,11 @@
     --text-color-2: #fff;
     --text-color-3: rgb(204, 0, 0);
     --overlay-color: rgb(12 12 12 / 63%);
+    --glass-bg: rgba(28, 28, 30, 0.45);
+    --glass-border: rgba(255, 255, 255, 0.14);
+    --glass-shadow: rgba(0, 0, 0, 0.5);
+    --glass-text: #f3f4f6;
+    --glass-text-dim: rgba(243, 244, 246, 0.66);
 }
 
 [data-theme="light"] {
@@ -16,6 +21,11 @@
     --text-color-2: #000;
     --text-color-3: rgb(204, 0, 0);
     --overlay-color: rgb(255 255 255 / 70%);
+    --glass-bg: rgba(255, 255, 255, 0.55);
+    --glass-border: rgba(10, 10, 10, 0.10);
+    --glass-shadow: rgba(20, 20, 30, 0.12);
+    --glass-text: #16181c;
+    --glass-text-dim: rgba(22, 24, 28, 0.62);
 }
 
 html,
@@ -33,7 +43,7 @@ body {
     font-family: 'Raleway', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-top: 60px;
+    padding-top: 84px;
     border-left: 10px solid var(--primary-color);
     border-right: 10px solid var(--primary-color);
 }

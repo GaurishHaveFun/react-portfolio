@@ -5,8 +5,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import {
   dataabout,
   meta,
-  worktimeline,
-  dataexperience,
   skills,
   services,
 } from "../../content_option";
@@ -57,51 +55,10 @@ export const About = () => {
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <div>
-              <p>{dataabout.aboutme}</p>
+              {dataabout.aboutme.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
             </div>
-          </Col>
-        </Row>
-        <Row className="sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">Experience</h3>
-          </Col>
-          <Col lg="7">
-            {dataexperience.map((data, i) => {
-              return (
-                <div className="experience_item py-4" key={i}>
-                  <h5 className="experience_title">{data.jobtitle}</h5>
-                  <div className="experience_subtitle">
-                    {data.where}
-                    {data.location ? ` — ${data.location}` : ""} · {data.date}
-                  </div>
-                  <ul className="experience_bullets">
-                    {data.bullets.map((bullet, j) => (
-                      <li key={j}>{bullet}</li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </Col>
-        </Row>
-        <Row className=" sec_sp">
-          <Col lg="5">
-            <h3 className="color_sec py-4">Education & Achievements</h3>
-          </Col>
-          <Col lg="7">
-            <table className="table caption-top">
-              <tbody>
-                {worktimeline.map((data, i) => {
-                  return (
-                    <tr key={i}>
-                      <th scope="row">{data.jobtitle}</th>
-                      <td>{data.where}</td>
-                      <td>{data.date}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
           </Col>
         </Row>
         <Row className="sec_sp">
