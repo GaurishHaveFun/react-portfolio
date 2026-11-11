@@ -29,6 +29,18 @@ const dataabout = {
 const dataexperience = [
     {
         jobtitle: "Software Engineer Intern",
+        where: "Georgia Football Athletics",
+        logo: ugaLogo,
+        location: "Athens, GA",
+        date: "Aug - Present",
+        bullets: [
+            "Rebuilt the program’s recruiting database and platform from scratch on AWS (PostgreSQL, API Gateway, ECS, S3, CloudFront, ElastiCache), replacing third-party vendor tools and cutting annual vendor spend by 90%",
+            "Integrated 10+ external APIs to pull recruiting data into one system, replacing manual data entry for 15+ staff members",
+            "Built an Amazon Bedrock-powered assistant with tool access to the platform’s database and 10+ integrated APIs, letting coaches search recruits, pull data, and update records through natural-language requests.",
+        ],
+    },
+    {
+        jobtitle: "Software Engineer Intern",
         where: "FanDuel",
         logo: fanduelLogo,
         location: "Atlanta, GA",
@@ -40,27 +52,18 @@ const dataexperience = [
         ],
     },
     {
-        jobtitle: "IT Security & Enterprise Architecture Intern",
+        jobtitle: "Software Engineer Intern",
         where: "Mercedes-Benz USA",
         logo: mercedesBenzLogo,
         location: "Sandy Springs, GA",
         date: "June - August 2025",
         bullets: [
-            "Built Python automation tooling leveraging the Checkmarx REST API to integrate security scans into CI/CD pipelines across 3 engineering teams, reducing manual code review time by ~40% and enabling earlier vulnerability detection in the development lifecycle.",
-            "Audited and restructured IAM policies across AWS and Azure environments, applying least-privilege principles to eliminate 25% of excess permissions and strengthen compliance with enterprise security standards.",
+            "Developed a Python service that pulls Checkmarx scan results via REST API, normalizes findings, and automatically creates prioritized tickets in ServiceNow, reducing manual review time ~35% across 2 engineering teams",
+            "Designed Terraform configurations to enforce least-privilege access across AWS IAM, removing 20% of excess permissions while keeping applications running without access disruptions",
+            "Built a data pipeline using Power Query and custom DAX to ingest and transform LeanIX data into Power BI dashboards, improving reporting speed by 40% for senior architects",
         ],
     },
-    {
-        jobtitle: "Undergraduate Researcher — Object Detection (YOLO)",
-        where: "University of Georgia",
-        logo: ugaLogo,
-        location: "Athens, GA",
-        date: "Jan - May 2025",
-        bullets: [
-            "Developed an object detection pipeline using YOLO in Python, achieving 80% precision and 75% recall in detecting fly clusters on cattle images.",
-            "Applied data augmentation techniques including random flips, rotations, and scaling to address class imbalance, increasing training dataset diversity and improving model generalization.",
-        ],
-    },
+    
 ];
 
 const skills = [{
